@@ -31,12 +31,12 @@ while True:
    username_lowercase = sani_username_input[0]
    print(username_lowercase)
 
-   if username_lowercase.upper() == True:
-      print("I am uppercase.")
+   if username_lowercase.islower():
+      print("I am lowercase.")
       break
       #print("Please try again.")
    else:
-      print("I am lowercase")
+      print("I am uppercase")
       break
    # else:
    #    continue
