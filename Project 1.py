@@ -27,12 +27,12 @@ sani_username_input = username_input.strip()
 #start Username verfifaction
 #checking if username starts with lowercase
 username_lowercase = sani_username_input.lower(0)
-if username_lowercase == False:
+while username_lowercase == False:
     print("Username must start with a lowercase letter.")
     print("Please try again.")
     
-   else:
-    continue
+   #else:
+    #continue
 
 #checking if username has letters, numbers and underscores
 usernameinput_validation = set((sani_username_input))
@@ -40,14 +40,14 @@ if usernameinput_validation.issubset(allowed_username_characters) == False:
   print("Username can only contain letters, numbers, and underscores")
   print("Please try again.")
   
-  else:
-   continue
+  #else:
+   #continue
 
 #checking if username is taken
 if sani_username_input in verified_usernames == True:
   print("That username is taken.")
   print("Please try again.")
-else:
+# else:
    #continue
 
 #gathering user input for password
@@ -62,8 +62,8 @@ password_length = len(sani_userpass_input)
 if sani_userpass_input == password_length <8:
   print("Password must be at least 8 characters.")
   print("Please try again.")
-else:
-   #continue
+# else:
+#    #continue
 
 #checking if password has an uppercase letter
 password_uppercase = sani_userpass_input.isupper()
