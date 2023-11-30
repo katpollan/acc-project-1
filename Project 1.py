@@ -6,7 +6,7 @@ verified_passwords = ["Adminpass1!,tesTpass3","pasSs123"]
 #set for allowed username characters
 allowed_username_characters = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_")
 #set to test if password has allowed characters
-special_password_characters = set("!?@#^&*_-")
+special_password_characters = "!?@#^&*_-"
 
 #program opening
 print("Hello!")
@@ -88,20 +88,19 @@ while True:
 
 #checking to see if password has a number
    password_number = any(ele.isdigit() for ele in sani_userpass_input)
-   print(password_number)
    
    if password_number is False:
        print("Password must contain at least one number")
        print("Please try again")
 
 #seeing if password has one of the special characters
-   # password_specialcharacters = set((sani_userpass_input))
-   # print(password_specialcharacters)
-   # if usernameinput_validation.issubset(special_password_characters) == False:
-   #    print ("Password must contain one of these characters: !?@#^&*_-")
-   #    print("Please try again.")
-# else:
-#    #continue
+   for s in special_password_characters:
+      if (s == sani_userpass_input):
+       #print ("Password must contain one of these characters: !?@#^&*_-")
+       #print("Please try again.")
+         print("Yes")
+      else:
+         print("No")
 
 # #User has completed verifaction
 
