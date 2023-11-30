@@ -54,23 +54,23 @@ while True:
 # # else:
 #    #continue
 
-# #gathering user input for password
-# userpassword_input = input("Please enter a password:" )
+#gathering user input for password
+   userpassword_input = input("Please enter a password:" )
+#sanitize user's input for password
+   sani_userpass_input = userpassword_input.strip()
 
-# #sanitize user's input for password
-# sani_userpass_input = userpassword_input.strip()
-
-# #start Password verifaction
-# #checking password length
-# password_length = len(sani_userpass_input)
-# if sani_userpass_input == password_length <8:
-#   print("Password must be at least 8 characters.")
-#   print("Please try again.")
+#start Password verifaction
+#checking password length
+   password_length = len(sani_userpass_input)
+   if password_length < 8:
+      print("Password must be at least 8 characters.")
+      print("Please try again.")
 # # else:
 # #    #continue
 
-# #checking if password has an uppercase letter
-# password_uppercase = sani_userpass_input.upper()
+#checking if password has an uppercase letter
+   password_uppercase = sani_userpass_input.upper()
+   print(password_uppercase)
 # if password_uppercase == False:
 #   print("Password must contain at least one uppercase letter")
 #   print("Please try again")
