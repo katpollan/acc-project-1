@@ -69,32 +69,38 @@ while True:
 # #    #continue
 
 #checking if password has an uppercase letter
-   password_uppercase = sani_userpass_input.upper()
+   password_uppercase = sani_userpass_input.isupper()
    print(password_uppercase)
-# if password_uppercase == False:
-#   print("Password must contain at least one uppercase letter")
-#   print("Please try again")
+   
+   if password_uppercase is False:
+      print("Password must contain at least one uppercase letter")
+      print("Please try again")
 # else:
 #    #continue
 
-# #checking if password has a lowercase letter
-# password_lowercase = sani_userpass_input.islower()
-# if password_lowercase == False:
-#   print("Password must contain at least one lowercase letter")
-#   print("Please try again")
+#checking if password has a lowercase letter
+   # password_lowercase = sani_userpass_input.islower()
+   # print(password_lowercase)
+   
+   # if password_lowercase is False:
+   #    print("Password must contain at least one lowercase letter")
+   #    print("Please try again")
 # else:
 #    #continue
 
-# #checking to see if password has a number
-# password_number = sani_userpass_input.isdigit()
-# if password_number == False:
-#   print("Password must contain at least one number")
-#   print("Please try again")
+#checking to see if password has a number
+   # password_number = sani_userpass_input.isdigit()
+   # print(password_number)
+   # if password_number is False:
+   #    print("Password must contain at least one number")
+   #    print("Please try again")
 
-# password_specialcharacters = set((sani_userpass_input))
-# if usernameinput_validation.issubset(special_password_characters) == False:
-#   print ("Password must contain one of these characters: !?@#^&*_-")
-#   print("Please try again.")
+#seeing if password has one of the special characters
+   # password_specialcharacters = set((sani_userpass_input))
+   # print(password_specialcharacters)
+   # if usernameinput_validation.issubset(special_password_characters) == False:
+   #    print ("Password must contain one of these characters: !?@#^&*_-")
+   #    print("Please try again.")
 # else:
 #    #continue
 
