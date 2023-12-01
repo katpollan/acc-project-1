@@ -32,9 +32,9 @@ while True:
    if username_lowercase.isupper():
       print("Username must start with a lowercase.")
       print("Please try again")
-      #break
-   #else:
-   #    continue
+      break
+   else:
+       continue
 
 #checking if username has letters, numbers and underscores
    usernameinput_validation = set((sani_username_input))
@@ -94,37 +94,47 @@ while True:
        print("Please try again")
 
 #seeing if password has one of the special characters
-   for s in special_password_characters:
-      if s in sani_userpass_input:
-       #print ("Password must contain one of these characters: !?@#^&*_-")
-       #print("Please try again.")
-         print("Nope")
-      else:
-         print("Yep")
+   counter = 0
+   for s in range(len(sani_userpass_input)):
+    if sani_userpass_input[s] in special_password_characters:
+        counter +=1
+   if counter:
+      print("Thank you. Sign up successful")
+      break
+   else:
+      print("Password must contain one of these characters: !?@#^&*_-")
+      print("Please try again.")
+      continue
+       
+#User has completed verifaction
 
-# #User has completed verifaction
+#add username and passwords to list
+verified_usernames.append(sani_username_input)
+verified_passwords.append(sani_userpass_input)
+print(verified_usernames)
+print(verified_passwords)
 
-
-# #add username and passwords to list
-# verified_usernames.append(sani_username_input)
-# verified_passwords.append(sani_userpass_input)
-
-# print("Thank you! Sign up successful.")
-# print("Please log in.")
+print("Please log in.")
 
 # #gathering users login input
-# user_name = input('Please enter your username' ) #gathers user's handle
-# user_password = input ('Please enter your password' ) #gathers user's password
+user_name = input('Please enter your username:' ) #gathers user's handle
+user_password = input ('Please enter your password:' ) #gathers user's password
 
-# #sanitizing the user inputs
-# sani_inputusername = user_name.strip() #sanitizes the user name
-# sani_inputpassword = user_password.strip() #sanitizes the password
+#sanitizing the user inputs
+sani_inputusername = user_name.strip() #sanitizes the user name
+sani_inputpassword = user_password.strip() #sanitizes the password
 
-# if sani_inputusername in verified_usernames == True and sani_inputpassword in verified_passwords == True:
-#     print('Login Successful')
+for u in verified_usernames:
+   if (u == sani_inputusername):
+         continue
+   else:
+         print("Incorrect username")
 
-# else:
-#   print("Incorrect user name or password")
-#   print("Please try again.")
-
-# #create zip+dictonary to verify that username+pass go together
+for u in verified_passwords:
+   if (u == sani_inputpassword):
+      print("Log in successful")
+      break
+   
+   else:
+      print("Incorrect password")
+      print("Please try again.")
