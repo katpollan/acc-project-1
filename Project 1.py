@@ -39,62 +39,36 @@ while True:
          print("That username is taken.")
          print("Please try again.")
          continue
-   
-   # #checking if username has letters, numbers and underscores
+   #checking if username has letters, numbers and underscores
    usernameinput_validation = set((sani_username_input))
    if usernameinput_validation.issubset(allowed_username_characters) == False:
       print("Username can only contain letters, numbers, and underscores")
       print("Please try again.")
       continue
-      
-   print('I am here')
+   #User has completed username validation
+   print('User name validation complete')
+  
+   #gathering user input for password
+   userpassword_input = input("Please enter a password:" )
+   #sanitize user's input for password
+   sani_userpass_input = userpassword_input.strip()
 
-
-      
-       
-
-# #checking if username has letters, numbers and underscores
-#    usernameinput_validation = set((sani_username_input))
-#    if usernameinput_validation.issubset(allowed_username_characters) == False:
-#       print("Username can only contain letters, numbers, and underscores")
-#       print("Please try again.")
-      
-#       result = usernameinput_validation.issubset(allowed_username_characters)
-#       print(result)
-#       print(usernameinput_validation)
-
-# #checking if username is taken
-#    for u in verified_usernames:
-#       if (u == sani_username_input):
-#          print("That username is taken.")
-#          print("Please try again.")
-
-# # # else:
-# #    #continue
-
-# #gathering user input for password
-#    userpassword_input = input("Please enter a password:" )
-# #sanitize user's input for password
-#    sani_userpass_input = userpassword_input.strip()
-
-# #start Password verifaction
-# #checking password length
-#    password_length = len(sani_userpass_input)
-#    if password_length < 8:
-#       print("Password must be at least 8 characters.")
-#       print("Please try again.")
-# # # else:
-# # #    #continue
-
-# #checking if password has an uppercase letter
-#    password_uppercase = any(ele.isupper() for ele in sani_userpass_input)
+#start Password verifaction
+#checking password length
+   password_length = len(sani_userpass_input)
+   if password_length < 8:
+      print("Password must be at least 8 characters.")
+      print("Please try again.")
+      continue
    
-#    if password_uppercase is False:
-#        print("Password must contain at least one uppercase letter")
-#        print("Please try again")
-# # else:
-# #    #continue
-
+#checking if password has an uppercase letter
+   password_uppercase = any(ele.isupper() for ele in sani_userpass_input)
+   if password_uppercase is False:
+        print("Password must contain at least one uppercase letter")
+        print("Please try again")
+        continue
+   
+   print('I am here')
 # #checking if password has a lowercase letter
 #    password_lowercase = any(ele.islower() for ele in sani_userpass_input)
    
