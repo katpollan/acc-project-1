@@ -33,10 +33,14 @@ while True:
       print("Username must start with a lowercase.")
       print("Please try again")
       continue
+
+# #checking if username is taken
+   if sani_username_input in verified_usernames:
+         print("That username is taken.")
+         print("Please try again.")
+         continue
    
    print('I am here')
-
-
 
 
 # #checking if username has letters, numbers and underscores
