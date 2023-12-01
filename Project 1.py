@@ -68,22 +68,20 @@ while True:
         print("Please try again")
         continue
    
+#checking if password has a lowercase letter
+   password_lowercase = any(ele.islower() for ele in sani_userpass_input)  
+   if password_lowercase is False:
+       print("Password must contain at least one lowercase letter")
+       print("Please try again")
+       continue
+   
+#checking to see if password has a number
+   password_number = any(ele.isdigit() for ele in sani_userpass_input)
+   if password_number is False:
+      print("Password must contain at least one number")
+      print("Please try again")
+      continue
    print('I am here')
-# #checking if password has a lowercase letter
-#    password_lowercase = any(ele.islower() for ele in sani_userpass_input)
-   
-#    if password_lowercase is False:
-#       print("Password must contain at least one lowercase letter")
-#       print("Please try again")
-# # else:
-# #    #continue
-
-# #checking to see if password has a number
-#    password_number = any(ele.isdigit() for ele in sani_userpass_input)
-   
-#    if password_number is False:
-#        print("Password must contain at least one number")
-#        print("Please try again")
 
 # #seeing if password has one of the special characters
 #    counter = 0
