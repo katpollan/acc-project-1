@@ -32,7 +32,6 @@ while True:
    if username_lowercase.isupper():
       print("Username must start with a lowercase.")
       print("Please try again")
-      break
    else:
        continue
 
@@ -42,8 +41,8 @@ while True:
       print("Username can only contain letters, numbers, and underscores")
       print("Please try again.")
   
-#   #else:
-#    #continue
+   else:
+    continue
 
 #checking if username is taken
    for u in verified_usernames:
@@ -100,7 +99,6 @@ while True:
         counter +=1
    if counter:
       print("Thank you. Sign up successful")
-      break
    else:
       print("Password must contain one of these characters: !?@#^&*_-")
       print("Please try again.")
@@ -124,17 +122,9 @@ user_password = input ('Please enter your password:' ) #gathers user's password
 sani_inputusername = user_name.strip() #sanitizes the user name
 sani_inputpassword = user_password.strip() #sanitizes the password
 
-for u in verified_usernames:
-   if (u == sani_inputusername):
-         continue
-   else:
-         print("Incorrect username")
-
-for u in verified_passwords:
-   if (u == sani_inputpassword):
-      print("Log in successful")
-      break
+if sani_inputusername == verified_usernames and sani_inputpassword == verified_passwords:
+   print('Log in successful.')
+   break
    
-   else:
-      print("Incorrect password")
-      print("Please try again.")
+else:
+   print("Incorrect username or password")
