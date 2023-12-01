@@ -40,8 +40,18 @@ while True:
          print("Please try again.")
          continue
    
+   # #checking if username has letters, numbers and underscores
+   usernameinput_validation = set((sani_username_input))
+   if usernameinput_validation.issubset(allowed_username_characters) == False:
+      print("Username can only contain letters, numbers, and underscores")
+      print("Please try again.")
+      continue
+      
    print('I am here')
 
+
+      
+       
 
 # #checking if username has letters, numbers and underscores
 #    usernameinput_validation = set((sani_username_input))
