@@ -81,7 +81,6 @@ while True:
       print("Password must contain at least one number")
       print("Please try again")
       continue
-   print('I am here')
 
 #seeing if password has one of the special characters
    counter = 0
@@ -112,8 +111,13 @@ while True:
    if sani_inputusername in verified_usernames and sani_inputpassword in verified_passwords:
       print('Log in successful.')
       print('Thank you!')
-      break    
+      break
+
    else:
+      verified_usernames.remove(sani_username_input)
+      verified_passwords.remove(sani_userpass_input)
       print("Incorrect username or password")
       print('Please try again')
       continue
+#there's probably a better way to do line 117-118, but i couldn't figure out how to loop to line 104-105
+#looping back to beginning means that the username+password are appended and can't be used, so this removes them
