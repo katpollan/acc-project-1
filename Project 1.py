@@ -83,37 +83,36 @@ while True:
       continue
    print('I am here')
 
-# #seeing if password has one of the special characters
-#    counter = 0
-#    for s in range(len(sani_userpass_input)):
-#     if sani_userpass_input[s] in special_password_characters:
-#         counter +=1
-#    if counter:
-#       print("Thank you. Sign up successful")
-#    else:
-#       print("Password must contain one of these characters: !?@#^&*_-")
-#       print("Please try again.")
-#       continue  
-#       #User has completed verifaction
-#       #add username and passwords to list
-#       verified_usernames.append(sani_username_input)
-#       verified_passwords.append(sani_userpass_input)
-#       print(verified_usernames)
-#       print(verified_passwords)
+#seeing if password has one of the special characters
+   counter = 0
+   for s in range(len(sani_userpass_input)):
+     if sani_userpass_input[s] in special_password_characters:
+         counter +=1
+   if counter:
+       print("Thank you. Sign up successful")
+   else:
+       print("Password must contain one of these characters: !?@#^&*_-")
+       print("Please try again.")
+       continue
+#User has completed verifaction
+   
+#add username and passwords to list
+   verified_usernames.append(sani_username_input)
+   verified_passwords.append(sani_userpass_input)
 
-#       print("Please log in.")
-
-#       # #gathering users login input
-#       user_name = input('Please enter your username:' ) #gathers user's handle
-#       user_password = input ('Please enter your password:' ) #gathers user's password
-
-#       #sanitizing the user inputs
-#       sani_inputusername = user_name.strip() #sanitizes the user name
-#       sani_inputpassword = user_password.strip() #sanitizes the password
-
-#       if sani_inputusername == verified_usernames and sani_inputpassword == verified_passwords:
-#          print('Log in successful.')
-#          break
-      
-#       else:
-#          print("Incorrect username or password")
+   print("Please log in.")
+#gathering users login input
+   user_name = input('Please enter your username:' ) #gathers user's handle
+   user_password = input ('Please enter your password:' ) #gathers user's password
+#sanitizing the user inputs
+   sani_inputusername = user_name.strip() #sanitizes the user name
+   sani_inputpassword = user_password.strip() #sanitizes the password
+#user log-in tests
+   if sani_inputusername == verified_usernames and sani_inputpassword == verified_passwords:
+      print('Log in successful.')
+      print('Thank you!')
+      break     
+   else:
+      print("Incorrect username or password")
+      print('Please try again')
+      continue
