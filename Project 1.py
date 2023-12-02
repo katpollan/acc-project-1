@@ -107,11 +107,12 @@ while True:
 #sanitizing the user inputs
    sani_inputusername = user_name.strip() #sanitizes the user name
    sani_inputpassword = user_password.strip() #sanitizes the password
-#user log-in tests
-   if sani_inputusername == verified_usernames and sani_inputpassword == verified_passwords:
+
+#user log-in
+   if sani_inputusername in verified_usernames and sani_inputpassword in verified_passwords:
       print('Log in successful.')
       print('Thank you!')
-      break     
+      break    
    else:
       print("Incorrect username or password")
       print('Please try again')
