@@ -46,7 +46,6 @@ while True:
       print("Please try again.")
       continue
    #User has completed username validation
-   print('User name validation complete')
   
    #gathering user input for password
    userpassword_input = input("Please enter a password:" )
